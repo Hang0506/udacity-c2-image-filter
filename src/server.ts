@@ -28,7 +28,7 @@ import { Request } from 'express';
   // RETURNS
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
-  app.get('/filteredimage', async function(req, res) {  // url:  /filteredimage?image_url={{URL}}
+  app.get( "/filteredimage/", async (req:express.Request, res:express.Response) => {  // url:  /filteredimage?image_url={{URL}}
     //GET URL
     var url = req.query['image_url']
     //1. validate the image_url query
